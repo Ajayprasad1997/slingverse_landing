@@ -44,7 +44,8 @@ function Logo({ light = false }: { light?: boolean }) {
       </span> */}
       <span className={"text-xl " + (light ? "text-white" : "text-ink")}>
         sling<span className="text-accent">verse</span>
-        <span className="text-accent">.</span>
+        <span className="text-accent">.</span>   
+        
       </span>
     </a>
   );
