@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 .next
 node_modules
 .env*
 !.env.example
+=======
+node_modules/
+.next/
+out/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+>>>>>>> 606bc7434d6f57538a4896e301a61d5367286cf5
