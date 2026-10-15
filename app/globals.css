@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{color-scheme:light;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#10223f;font-family:'DM Sans',sans-serif}
+h1,h2,h3,h4{font-family:'Manrope',sans-serif;letter-spacing:-.04em}
+::selection{background:#dce5ff;color:#10223f}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #8aa4ff;outline-offset:3px}
+.container{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+.section{padding:100px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#315cff;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.eyebrow:before{content:"";width:22px;height:2px;background:#315cff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:999px;font-size:15px;font-weight:700;transition:transform .2s,box-shadow .2s,background .2s;border:1px solid transparent;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:#315cff;color:#fff;box-shadow:0 10px 24px #315cff33}
+.btn-primary:hover{background:#2049ef;box-shadow:0 14px 28px #315cff44}
+.btn-secondary{background:#fff;border-color:#dce4f4;color:#10223f}
+.grid-bg{background-image:linear-gradient(#e9effb 1px,transparent 1px),linear-gradient(90deg,#e9effb 1px,transparent 1px);background-size:42px 42px}
+.card{border:1px solid #e8edf7;background:#fff;border-radius:22px;box-shadow:0 12px 35px rgba(28,54,100,.045)}
+@media(max-width:700px){.container{width:min(100% - 32px,1160px)}.section{padding:70px 0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* AOS safety: keep content readable if animation JS is unavailable. */
+[data-aos]{will-change:transform,opacity}
+@media(prefers-reduced-motion:reduce){[data-aos]{opacity:1!important;transform:none!important}}
+/* Keep anchored section headings visible beneath the fixed navigation. */
+section[id]{scroll-margin-top:92px}
